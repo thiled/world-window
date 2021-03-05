@@ -1,0 +1,23 @@
+{
+  "name": "world-window",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lds.config.js",
+  "dependencies": {
+    "live-dev-server": "^0.12.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "live-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiled/world-window.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiled/world-window/issues"
+  },
+  "homepage": "https://github.com/thiled/world-window#readme"
+}
