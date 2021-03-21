@@ -12,17 +12,13 @@
         margin: 0px;
         position: relative;
       }
+      /* 打印机边距矫正 */
       .content {
         position: absolute;
         top: 12px;
         right: 8px;
         left: 27px;
         bottom: 7px;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
 
       .br,
@@ -37,6 +33,7 @@
         font-size: 48px;
         line-height: 100px;
         text-align: center;
+        display: none;
       }
       .br {
         bottom: 0;
@@ -70,24 +67,40 @@
         left: 49px;
         top: 0;
       }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .title {
+        position: absolute;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 20px;
+        bottom: 0;
+        right: 0;
+        font-size: 48px;
+      }
     </style>
   </head>
 
   <body>
     <div class="content">
-      <div class="tl">1
+      <div class="tl">
+        1
         <span class="line-h"></span>
         <span class="line-v"></span>
       </div>
-      <div class="tr">2
-        <span class="line-h"></span> <span class="line-v"></span>
+      <div class="tr">
+        2 <span class="line-h"></span> <span class="line-v"></span>
       </div>
-      <div class="bl">3
-        <span class="line-h"></span> <span class="line-v"></span>
+      <div class="bl">
+        3 <span class="line-h"></span> <span class="line-v"></span>
       </div>
-      <div class="br">4
-        <span class="line-h"></span> <span class="line-v"></span>
+      <div class="br">
+        4 <span class="line-h"></span> <span class="line-v"></span>
       </div>
+      <div class="title"></div>
       <img id="img" alt="" />
     </div>
     <script>
@@ -96,8 +109,10 @@
       }).then((res) => {
         let data = res.data.images[0];
         console.log(data);
-        document.getElementById('img').src=`https://cn.bing.com${data.urlbase}_UHD.jpg`
-        document.getElementsByClassName('title')[0].innerHTML=data.copyright
+        document.getElementById(
+          'img'
+        ).src = `https://cn.bing.com${data.urlbase}_UHD.jpg`;
+        document.getElementsByClassName('title')[0].innerHTML = data.copyright;
       });
     </script>
   </body>

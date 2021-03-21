@@ -15,6 +15,6 @@ const outputPath = 'output.pdf';
     height: 2100,
   });
   await browser.close();
-  // do print
+  // 打印，需要设置好默认打印E机
   ptp.print(outputPath).then(console.log).catch(console.error);
 })();
