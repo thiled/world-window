@@ -7,38 +7,89 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
     <style>
       body {
-        width: 3508px;
-        height: 2480px;
+        width: 2970px;
+        height: 2100px;
         margin: 0px;
         position: relative;
       }
-
+      .content {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+        left: 27px;
+        bottom: 7px;
+      }
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .title {
+      .br,
+      .tl,
+      .tr,
+      .bl {
         position: absolute;
         color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px 20px;
+        background-color: gray;
+        width: 100px;
+        height: 100px;
+        font-size: 48px;
+        line-height: 100px;
+        text-align: center;
+      }
+      .br {
         bottom: 0;
         right: 0;
-        font-size: 48px;
+      }
+      .tl {
+        top: 0;
+        left: 0;
+      }
+      .tr {
+        top: 0;
+        right: 0;
+      }
+      .bl {
+        bottom: 0;
+        left: 0;
+      }
+      .line-h {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        left: 0;
+        top: 49px;
+      }
+      .line-v {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: white;
+        left: 49px;
+        top: 0;
       }
     </style>
   </head>
 
   <body>
-    <div class="title">
-      
+    <div class="content">
+      <div class="tl">1
+        <span class="line-h"></span>
+        <span class="line-v"></span>
+      </div>
+      <div class="tr">2
+        <span class="line-h"></span> <span class="line-v"></span>
+      </div>
+      <div class="bl">3
+        <span class="line-h"></span> <span class="line-v"></span>
+      </div>
+      <div class="br">4
+        <span class="line-h"></span> <span class="line-v"></span>
+      </div>
+      <img id="img" alt="" />
     </div>
-    <img
-      id="img"
-      alt=""
-    />
     <script>
       axios({
         url: '/HPImageArchive.aspx?format=js&idx=0&n=1&pid=hp&uhd=1',

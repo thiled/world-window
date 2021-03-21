@@ -4,11 +4,13 @@
   "description": "",
   "main": "lds.config.js",
   "dependencies": {
-    "live-dev-server": "^0.12.2"
+    "live-dev-server": "^0.12.2",
+    "pdf-to-printer": "^1.7.0",
+    "puppeteer": "^8.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "live-dev-server"
+    "serve": "live-dev-server"
   },
   "repository": {
     "type": "git",
