@@ -15,10 +15,10 @@
       /* 打印机边距矫正 */
       .content {
         position: absolute;
-        top: 12px;
+        top: 8px;
         right: 8px;
-        left: 27px;
-        bottom: 7px;
+        left: 26px;
+        bottom: 3px;
       }
 
       .br,
@@ -76,10 +76,11 @@
         position: absolute;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px 20px;
+        padding: 20px 15px 20px 20px;
         bottom: 0;
         right: 0;
         font-size: 48px;
+        line-height: 48px;
       }
     </style>
   </head>
@@ -112,8 +113,10 @@
         document.getElementById(
           'img'
         ).src = `https://cn.bing.com${data.urlbase}_UHD.jpg`;
-        document.getElementsByClassName('title')[0].innerHTML = data.copyright;
+        document.getElementsByClassName('title')[0].innerHTML = `${
+          data.copyright.split('(')[0]
+        } ${data.enddate.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')}`;
       });
-    </script>
-  </body>
+    </script> 
+  </body> 
 </html>
